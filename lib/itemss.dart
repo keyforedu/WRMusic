@@ -38,9 +38,9 @@ class ItemsPage extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 100.0), // Add space before the title
-          Padding(
-            padding: const EdgeInsets.all(16.0),
+          const SizedBox(height: 100.0), // Add space before the title
+          const Padding(
+            padding: EdgeInsets.all(16.0),
             child: Text(
               "All Albums",
               style: TextStyle(
@@ -52,7 +52,7 @@ class ItemsPage extends StatelessWidget {
           ),
           Expanded(
             child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2, // Number of columns
                 crossAxisSpacing: 10.0,
                 mainAxisSpacing: 10.0,
@@ -101,7 +101,7 @@ class AlbumTile extends StatelessWidget {
             Expanded(
               child: Image.asset(album.imagePath, fit: BoxFit.cover),
             ),
-            SizedBox(height: 8.0),
+            const SizedBox(height: 8.0),
             Text(
               album.title,
               maxLines: 1,
