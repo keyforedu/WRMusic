@@ -13,28 +13,59 @@ class ItemsPage extends StatelessWidget {
         "lib/assets/÷ (Deluxe).jpg"),
     Album("Bad Habits (The Remixes)", "Ed Sheeran", "August 6, 2021",
         "lib/assets/Bad Habits (The Remixes).jpg"),
-    // Add more albums here
+    Album(
+        "Autumn Variations (Fan Living Room Sessions)",
+        "Ed Sheeran",
+        "September 29, 2023",
+        "lib/assets/Autumn Variations (Fan Living Room Sessions).jpg"),
+    Album("5", "Ed Sheeran", "May 12, 2015", "lib/assets/5.jpg"),
+    Album("2step (The Remixes)", "Ed Sheeran", "May 26, 2022",
+        "lib/assets/2step (The Remixes).jpg"),
+    Album("+", "Ed Sheeran", "September 9, 2011", "lib/assets/+.jpg"),
+    Album("No.6 Collaborations Project", "Ed Sheeran", "July 12, 2019",
+        "lib/assets/No.6 Collaborations Project.jpg"),
+    Album("x (Multiply)", "Ed Sheeran", "November 13, 2015",
+        "lib/assets/x (Wembley Edition).jpg"),
+    Album("Loose Change", "Ed Sheeran", "February 7, 2010",
+        "lib/assets/Loose Change.jpg"),
+    Album("No.5 Collaborations Project", "Ed Sheeran", "January 10, 2011",
+        "lib/assets/No.5 Collaborations Project.jpg"),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("All Albums"),
-        backgroundColor: Colors.black,
-      ),
-      body: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2, // Number of columns
-          crossAxisSpacing: 10.0,
-          mainAxisSpacing: 10.0,
-          childAspectRatio: 0.75, // Adjust this to control item height
-        ),
-        itemCount: albums.length,
-        itemBuilder: (context, index) {
-          return AlbumTile(album: albums[index]);
-        },
-        padding: const EdgeInsets.all(10.0),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SizedBox(height: 100.0), // Add space before the title
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Text(
+              "All Albums",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 24.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          Expanded(
+            child: GridView.builder(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2, // Number of columns
+                crossAxisSpacing: 10.0,
+                mainAxisSpacing: 10.0,
+                childAspectRatio: 0.75, // Adjust this to control item height
+              ),
+              itemCount: albums.length,
+              itemBuilder: (context, index) {
+                return AlbumTile(album: albums[index]);
+              },
+              padding: const EdgeInsets.all(10.0),
+            ),
+          ),
+        ],
       ),
       backgroundColor: Colors.black,
     );

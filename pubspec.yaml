@@ -72,6 +72,14 @@ flutter:
     - lib/assets/Don't.jpg
     - lib/assets/÷ (Deluxe).jpg
     - lib/assets/Bad Habits (The Remixes).jpg
+    - lib/assets/Autumn Variations (Fan Living Room Sessions).jpg
+    - lib/assets/5.jpg
+    - lib/assets/2step (The Remixes).jpg
+    - lib/assets/+.jpg
+    - lib/assets/No.6 Collaborations Project.jpg
+    - lib/assets/x (Wembley Edition).jpg
+    - lib/assets/Loose Change.jpg
+    - lib/assets/No.5 Collaborations Project.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
