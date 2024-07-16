@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wr_music/items.dart'; // Import the ItemsPage
+import 'package:ux_lab/itemss.dart';
 
 void main() {
   runApp(MyApp());
